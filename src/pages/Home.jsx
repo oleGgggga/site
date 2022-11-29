@@ -4,10 +4,13 @@ import csslogo from "../assets/img/logo_css.png"
 import { useNavigate } from "react-router-dom";
 import Subscribe from "../components/Subscribe";
 
+
 const Home = () => {
   const navigate = useNavigate();
   return(
+    
     <div>
+      
       <main>
       <section className="banner">
     <p id="name">Web Design</p>
@@ -17,6 +20,7 @@ const Home = () => {
       condimentum.
     </p>
   </section>
+  
   <Subscribe/>
   <section class="logo">
             <div class="box" onClick={()=>navigate("/html")} >

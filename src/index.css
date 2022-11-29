@@ -3,11 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+._lock{
+  overflow:hidden !important;
+}
 
 footer {
   height: 50px;
-  background-color: #475762;
-  color: #fff;
+  /* background-color: #475762; */
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,23 +19,29 @@ footer {
 .pagesInfo{
   height: 100%
 }
-footer p {
-  margin-top: 10px;
-  width: 200px;
+.burg{
+  display: none;
 }
 .navbar {
   background-color: #35424a;
-  color: #fff;
+  width: 100%;
+  z-index: 50;
+}
+.navbarWraper{
+  max-width: 1250px;
+  margin: 0px auto;
+  padding: 0px 30px;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  min-height: 100px;
+  min-height: 70px;
 }
-.navbar .left-navbar h1 {
-  font-size: 2rem;
-  font-weight: 700;
+.logo a{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
 }
+
 .navbar .right-navbar ul {
   list-style-type: none;
   display: flex;
@@ -46,16 +55,6 @@ footer p {
   text-transform: uppercase;
 }
 
-.logo {
-  display: flex;
-  min-height: 400px;
-  justify-content: center;
-  align-items: center;
-  
-}
-footer p{
-  text-align: center;
-}
 .box {
   text-align: center;
   padding: 30px;
@@ -76,7 +75,7 @@ footer p{
   min-height: 110px;
   align-items: center;
   background-color: #35424a;
-  padding: 0 15px;
+  padding: 0 30px;
 }
 
 #newsletter {
@@ -98,19 +97,19 @@ footer p{
 
 .about-us {
   display: flex;
-  padding: 20px 30px;
-  min-height: 700px;
+  padding: 0px 30px;
+  
 }
-.about-us .about {
+.about {
   padding: 20px 30px;
-  margin-right: 30px;
+  
 }
 .about-us .about #name {
   font-size: 1rem;
   margin-left: 0;
   font-weight: bold;
 }
-.about-us .about .description1 {
+.description1 {
   margin: 20px 0;
 }
 .about-us .about .description2 {
@@ -125,12 +124,13 @@ footer p{
 .services-container {
   display: flex;
   padding: 1rem;
-  min-height: 650px;
+  
 }
 .services-container #name {
   font-size: 1.1rem;
   margin-left: 5px;
 }
+
 
 .description {
   background-color: #e6e6e6;
@@ -140,6 +140,9 @@ footer p{
   margin-right: 40px;
   font-size: 15px;
   line-height: 1.6rem;
+}
+.message-form{
+padding-top: 20px;
 }
 
 .dark {
@@ -171,27 +174,98 @@ footer p{
     text-align: center;
 
   }
-  .navbar,
+  .about h4{
+    padding-top: 30px;
+  }
+  .about-us{
+    height: calc(100vh - 120px);
+  }
   .services-container,
   .subscribe,
   .about-us,
-  .logo {
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-  }
-
   #email {
     margin-bottom: 30px;
+    
+  }
+  #email {
+    width: 150px;
+    
+  }
+  .subscribe{
+    display: flex;
+    flex-direction: column;
+
   }
 
   #newsletter {
     margin-top: 30px;
+    margin-bottom: 20px;
   }
 
   .box {
     max-width: 500px;
   }
+  .burg i{
+    color: #fff;
+  }
+.navbar{
+  position: fixed;
+  
+}
+.nav-link{
+  display: none !important;
+}  
+.burg{
+  display: block;
+}
+.active_nav-link{
+  padding-top: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  top: 68px;
+  left: 0px;
+
+}
+.active_nav-link>li{
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.description{
+  display: block;
+}
+.services-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.description{
+  margin-right: 0px;
+}
+#name{
+  padding-top: 70px;
+}
+.dark{
+  width: auto !important;
+  max-width: 350px !important;
+}
+.priceWraper{
+  padding-top: 100px !important;
+  height: 100vh;
+}
+.priceHeader{
+  text-align: left;
+}
+  
+ 
+  
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -199,6 +273,7 @@ body {
 
 .banner {
   background-image: url(../src/assets/img/bg.jpg);
+  background-repeat: no-repeat;
   height: 400px;
   background-position: center center;
   background-size: cover;
@@ -220,10 +295,6 @@ body {
 .card {
   padding: 30px;
 }
-.row{
-  display: flex;
-  flex-direction: column;
-}
 .img-fluid{
   width: 60px;
   height: 60px;
@@ -232,3 +303,89 @@ body {
 .card-title{
   margin-bottom: 20px;
 }
+.priceWraper{
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url(../src/web-designer-pune-background.jpg);
+  min-height: calc(100vh - 70px);
+}
+.priceHeader{
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+
+}
+.mainForm{
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+.mainLabel{
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.firstLabel input::-webkit-outer-spin-button,
+.firstLabel input::-webkit-inner-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.priceWriterDescr{
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.firstLabel input{
+  font-size: 20px;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 7px;
+  color: gray;
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 38px;
+}
+.firstLabel{
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.firstLabel select{
+  margin-left: 15px;
+  border-color: #35424a;
+  border-width: 1px;
+  height: 18px;
+}
+.goAbout{
+  padding-top: 20px;
+}
+.goAboutDescr{
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+
+
+}
+.goAbout a{
+  text-decoration: none;
+  color: black;
+  background-color: #f16529;
+  padding: 4px;
+}
+.goAbout a:hover{
+  background-color: #f48252;
+}
+
