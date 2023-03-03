@@ -68,12 +68,17 @@ h1,h2, h3, h4, h5, h6{font-size: inherit; font-weight: 400;}
   font-weight: 700;
   font-size: 28px;
   text-transform: uppercase;
-  margin-right: 25px;
+  margin-right: 70px;
   margin-left: 20px;
   z-index: 10;
 }
 .menu_icon{
   display: none;
+}
+@media (min-width:706px) {
+  .activePageLink{
+    color: rgb(185, 186, 187) !important;
+  }
 }
 @media (max-width: 706px) {
   .header_body{
@@ -167,6 +172,7 @@ h1,h2, h3, h4, h5, h6{font-size: inherit; font-weight: 400;}
     width: 150px !important; 
   }
 }
+
 @media (max-width: 491px){
   .shop_filter_container{
     flex-direction: column;
@@ -279,6 +285,7 @@ h1,h2, h3, h4, h5, h6{font-size: inherit; font-weight: 400;}
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .main_header{
   text-align: center;
@@ -566,7 +573,7 @@ margin-right: 0;
   background-color: #fff;
   text-transform: uppercase;
   padding: 5px;
-  box-shadow:  0 0 11px rgba(0,0,0,0.5);;
+  box-shadow:  0 0 11px rgba(0,0,0,0.5);
 }
 .cart_back:hover{
   scale: 1.1;
@@ -682,4 +689,182 @@ margin-right: 0;
 }
 .contactWraper{
   padding-top: 130px;
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.main_Btn_shop{
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 30px;
+  line-height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: transparent;
+  color: white;
+  border: #fff 1px solid;
+}
+.main_Btn_shop:hover{
+  scale: 0.9;
+}
+.locationHdr{
+  font-size: 26px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (max-width: 491px) {
+  .contactWraper{
+    padding-top: 100px;
+  }
+}
+.rideContainer{
+  display: flex;
+  gap: 20px !important;
+  max-width: 1170px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.order_left{
+  max-width: 800px;
+}
+@media (max-width:1053px) {
+  .order_left{
+    max-width: 600px;
+  }
+}
+@media (max-width:848px) {
+  .order_left{
+    max-width: 450px;
+  }
+}
+@media (max-width: 710px) {
+  .order_container{
+    padding-top: 130px;
+    margin: auto;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .order_left{
+    max-width: 100%;
+  }
+}
+.beginerHdr{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+}
+@media (max-width: 640px) {
+  .rideContainer{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.shop_container{
+  padding-top: 130px;
+}
+@media (max-width: 491px) {
+  .shop_container{
+    padding-top: 100px;
+  }
+}
+.buy_cart{
+  margin-top: 10px;
+  font-size: 18px;
+  background-color: #fff;
+  text-transform: uppercase;
+  padding: 5px;
+  box-shadow:  0 0 11px rgba(0,0,0,0.5);;
+}
+.buy_cart:hover{
+  scale: 0.9;
+}
+.order_container{
+  padding-top: 130px;
+  margin: auto;
+  display: flex;
+  width: 100%;
+  max-width: 1170px;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  
+}
+.order_right{
+  height: fit-content;
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.cart_order_dscr{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 140px;
+}
+.cart_order_dscr button{
+  background-color: white;
+  border: 1px solid black;
+}
+.cart_order_dscr button:hover{
+  scale: 0.9;
+}
+.cart_order_bottom{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.cart_order_items{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.dialogBtm{
+  justify-content: space-between !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+.modal{
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease-in-out;
+}
+.openModal{
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: all;
+}
+.openImg{
+  transform: translate(-50%, -50%) scale(1);
+  cursor:default !important;
+}
+.full-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.25s ease-out;
+}
+.info_img{
+  cursor: pointer;
 }

@@ -31,8 +31,13 @@ export const cartSlice=createSlice({
             state.items=updateItems;
             state.totalPrice=state.totalPrice-quantity*price;
             state.itemsCount=state.itemsCount-quantity;
+        },
+        delAllItem: (state)=>{
+            state.items=[];
+            state.itemsCount=0;
+            state.totalPrice=0;
         }
     }
 });
-export const {addItem, delItem}=cartSlice.actions;
+export const {addItem, delItem, delAllItem}=cartSlice.actions;
 export default cartSlice.reducer;
