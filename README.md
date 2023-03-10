@@ -1,1 +1,1 @@
-To start: 1)npm i in site folder 2)json-server --watch db.json --port 3004 in site folder 3)npm satrt in app folder Open http://localhost:3000 to view it in your browser. The page will reload when you make changes.
+To start:  1) go to site folder 2)on the command line, run the following command: npm i 3)on the command line, run the following command: json-server --watch db.json --port 3004 4)on the command line, run the following command:npm satrt 5)Open http://localhost:3000 to view it in your browser.
